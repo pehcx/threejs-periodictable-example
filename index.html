@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Duplicate of Three.js Example</title>
+        <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+        <!-- Google stuff -->
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+        <script src="google-helper.js"></script>
+        <style>
+            body {
+                color: gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+                margin: 0;
+            }
+
+            .container {
+                border: 2px solid lightgray;
+                border-radius: 5px;
+                padding: 60px 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                max-width: 500px;
+                width: 100%;
+            }
+
+            /* Enforce custom login logic */
+            .g_id_signin > div > iframe {
+                pointer-events: none;
+            }
+
+            #signInButton {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome Back</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut ex purus. Pellentesque tempus vulputate turpis eu vulputate.</p>
+            
+            <div id="g_id_onload"
+                data-client_id="677404942614-3tkv1gdnq85k6ll9o4plmf7658jblhnl.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-auto_prompt="false">
+            </div>
+        
+            <div class="g_id_signin" id="signInButton"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="outline"
+                data-text="signin_with"
+                data-size="large"
+                data-logo_alignment="left">
+            </div>
+        </div>
+    </body>
+</html>
