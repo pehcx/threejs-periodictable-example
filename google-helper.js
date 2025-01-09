@@ -7,7 +7,7 @@ let sheetData = [];
 window.onload = function () {
     const data = sessionStorage.getItem('data');
     if (data) {
-        window.location.replace('/periodictable.html');
+        window.location.replace('periodictable.html');
     }
 
     tokenClient = google.accounts.oauth2.initTokenClient({
@@ -41,7 +41,7 @@ function getGoogleSheetData(accessToken) {
         .then((data) => {
             console.log(data);
             sessionStorage.setItem('data', JSON.stringify(data.values));
-            window.location.replace('/periodictable.html');
+            window.location.replace('periodictable.html');
         })
         .catch((error) => {
             console.error('Error fetching sheet data:', error);
